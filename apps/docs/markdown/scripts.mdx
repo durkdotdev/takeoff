@@ -1,0 +1,26 @@
+---
+category: "main"
+description: "TAKEOFF automatically generates some convenient scripts to use while developing."
+index: 4
+slug: "scripts"
+title: "Scripts"
+---
+
+# Scripts
+
+TAKEOFF automatically generates some convenient scripts to use while developing:
+
+## takeoff-init
+
+- command: `yarn takeoff-init`
+- purpose: After adding your [database environment variables](https://docs.takeoff.com/environment-variables#database), run this command to easily synch your app with your database, initliaize the database, and generate a Prisma client.
+
+## dev
+
+- comand: `yarn dev`
+- purpose: Your development environment. Run this command to instantly start your SaaS app, marketing website, UI component library, and database inspector all at once.
+
+## stripe-webhooks
+
+- command: `yarn stripe-webhooks`
+- purpose: Generate a [Stripe Webhook](https://stripe.com/docs/api/webhook_endpoints) mapping to your app's API. Make sure to add the secret key this command returns to your [environment variables](https://docs.takeoff.com/environment-variables#stripe) and then restart the development server.

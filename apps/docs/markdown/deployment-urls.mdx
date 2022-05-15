@@ -1,0 +1,37 @@
+---
+category: "deployment"
+description: "TAKEOFF leaves placeholders for production urls, when deploying your SaaS for the first time, make sure to add your own domain."
+index: 20
+slug: "deployment-urls"
+title: "Deployment URLs"
+---
+
+# Deployment URLs
+
+TAKEOFF leaves placeholders for production urls, when deploying your SaaS for the first time, **make sure to add your own domain!**
+
+Places to look and confirm you have your own domain:
+
+## APP_URL and MARKETING_URL
+
+- where: `APP_URL` in **app** and **marketing**
+- value: Your SaaS app's domain
+  - example: https://app.domain.com
+
+<br />
+
+- where: `MARKETING_URL` in **app**
+- value: Your SaaS homepage/marketing page's domain
+  - example: https://domain.com
+
+## Emails
+
+- where: `sendResetEmail`
+- value: Your appropriate email/domain to send password reset emails from
+
+<br />
+
+If you are using TAKEOFF's optional feature to send welcome emails:
+
+- where: `sendWelcomeEmail`
+- value: Your appropriate email/domain to send welcome emails from

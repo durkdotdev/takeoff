@@ -1,0 +1,24 @@
+---
+category: "main"
+description: "Every TAKEOFF project starts with the same project structure: Apps and Packages."
+index: 2
+slug: "project-structure"
+title: "Project Structure"
+---
+
+# Project Structure
+
+Every TAKEOFF project starts with the same project structure:
+
+### Apps
+
+- `app`: Your SaaS [Next.js](https://nextjs.org) app with a database, Stripe subscriptions, and user authentication enabled
+- `marketing`: Your SaaS [Next.js](https://nextjs.org) marketing website
+
+### Packages
+
+- `ui`: Your SaaS React component library shared by **app** and **marketing** equipped with the design system chosen during the **create-takeoff** command
+
+#### Turborepo
+
+All TAKEOFF projects come built on top of [Turborepo](https://turborepo.org/), a high-performance build system for JavaScript and TypeScript codebases.

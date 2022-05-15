@@ -1,0 +1,68 @@
+---
+category: "app"
+description: "Your app comes equipped with a connection to your database. TAKEOFF automatically creates Prisma schema for two models."
+index: 8
+slug: "database"
+title: "Database"
+---
+
+# Database
+
+Your `app` comes equipped with a connection to your database. TAKEOFF automatically creates [Prisma schema](https://www.prisma.io/docs/concepts/components/prisma-schema) for two models:
+
+## User
+
+- name: `User`
+- values:
+  - **id** - unique id
+  - **customerId** - unique id of customer created in Stripe dashboard
+  - **email** - unique email
+  - **password** - hashed password
+  - **signUpType** - used to track user's signup method (ex. credentials, google)
+  - **created** - date of user's signup
+
+### User Associated Functions
+
+TAKEOFF includes methods to interact with your Prisma User model:
+
+- name: `createUser`
+- description: Create a new User in the database
+
+<br />
+
+- name: `deleteUser`
+- description: Delete a User from the database
+
+<br />
+
+- name: `getUser`
+- description: Get a User from the database
+
+<br />
+
+- name: `updateUser`
+- description: Update a User's data in the database
+
+## Reset
+
+- name: `Reset`
+- values:
+  - **id** - unique id
+  - **userId** - User id
+
+### Reset Associated Functions
+
+TAKEOFF includes methods to interact with your Prisma Reset model:
+
+- name: `createReset`
+- description: Create a new Reset in the database associated with a User
+
+<br />
+
+- name: `deleteResets`
+- description: Delete all Resets in the database associated with a User
+
+<br />
+
+- name: `getReset`
+- description: Get a Reset

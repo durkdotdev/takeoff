@@ -1,0 +1,18 @@
+{
+  "name": "tailwind-ts",
+  "version": "0.0.0",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "classnames": "^2.3.1",
+    "config": "*",
+    "next": "^12.1.4",
+    "next-themes": "^0.1.1",
+    "react-icons": "^4.3.1",
+    "tsconfig": "*",
+    "typescript": "^4.5.3"
+  }
+}

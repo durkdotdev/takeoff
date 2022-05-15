@@ -1,0 +1,42 @@
+---
+category: "deployment"
+description: "When you're ready to deploy your SaaS built with TAKEOFF, make sure to follow these steps to seamlessly bring your project to production."
+index: 19
+slug: "deployment"
+title: "Deployment"
+---
+
+# Deployment
+
+When you're ready to deploy your SaaS built with TAKEOFF, make sure to follow these steps to seamlessly bring your project to production.
+
+## Build Command and Root Directory
+
+We reccomend using [Vercel](https://vercel.com) to deploy; however, you can deploy your SaaS to any provider that supports Next.js applications.
+
+Make sure to configure the build script as follows:
+
+```bash
+cd ../.. && npx turbo run build --scope=<app> --include-dependencies --no-deps
+```
+
+**_Note:_** scope will be either `app` or `marketing` depending on which platform you are depoying.
+
+You also want to make sure to specify the appropriate root directory:
+
+- For **app**: `apps/app`
+- For **marketing**: `/apps/marketing`
+
+For more information on how to do this specifically on Vercel, see the [Vercel docs](https://vercel.com/docs/concepts/git/monorepos).
+
+## Environment Variables
+
+Confirm that you are using the correct [environment variables](https://takeoff-docs.durk.dev/environment-variables).
+
+**_Note:_** Make sure you are using updated values for the following:
+
+- `NEXTAUTH_URL` - your site's domain, not localhost!
+- `STRIPE_SECRET_KEY` - use production API keys from your Stripe dashboard
+- `STRIPE_SIGNING_SECRET` - create a Stripe Webhook and use the generated signing key
+  - Tip: use your domain when giving Stripe the location of the webhook!
+  - example: `https://appdomain.com/api/stripe-webhooks`

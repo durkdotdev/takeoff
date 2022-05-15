@@ -1,0 +1,30 @@
+---
+category: "ui"
+description: "If you selected daisyUI, TAKEOFF will automatically configure it."
+index: 16
+slug: "daisyui"
+title: "Daisy UI"
+---
+
+# daisyUI
+
+[daisyUI](https://daisyui.com/) is the most popular, free and open-source Tailwind CSS component library
+
+If you selected daisyUI, TAKEOFF will automatically configure it within `_app.tsx` and `tailwind.config.js`:
+
+```jsx
+// _app.tsx
+
+import "tailwindcss/tailwind.css";
+
+...
+```
+
+```js
+// tailwind.config.js
+
+module.exports = {
+  //...
+  plugins: [require("daisyui")]
+};
+```

@@ -1,0 +1,11 @@
+{
+  "name": "unstyled-js",
+  "version": "0.0.0",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "license": "MIT",
+  "devDependencies": {
+    "config": "*",
+    "next": "^12.1.4"
+  }
+}

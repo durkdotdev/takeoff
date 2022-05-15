@@ -1,0 +1,31 @@
+---
+category: "ui"
+description: "If you selected Chakra UI, TAKEOFF will automatically configure it."
+index: 15
+slug: "chakra-ui"
+title: "Chakra UI"
+---
+
+# Chakra UI
+
+[Chakra UI](https://chakra-ui.com/) is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications.
+
+If you selected Chakra UI, TAKEOFF will automatically configure it within `_app.tsx`:
+
+```jsx
+// _app.tsx
+
+import { ChakraProvider } from "@chakra-ui/react";
+
+// Import Chakra theme and add it to ChakraProvider
+import theme from "../theme";
+
+const MyApp = ({
+  Component,
+  pageProps: { session, ...pageProps }
+}: AppProps) => {
+  return <ChakraProvider theme={theme}>...</ChakraProvider>;
+};
+
+export default MyApp;
+```

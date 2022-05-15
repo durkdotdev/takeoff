@@ -1,0 +1,21 @@
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "config": "*",
+    "next": "^12.1.4",
+    "react-icons": "^4.3.1",
+    "simple-ts-utils": "^1.1.0",
+    "tsconfig": "*",
+    "typescript": "^4.5.3"
+  },
+  "dependencies": {
+    "disable-scroll": "^0.6.0",
+    "framer-motion": "^6.2.8"
+  }
+}

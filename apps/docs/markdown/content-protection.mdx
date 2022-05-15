@@ -1,0 +1,29 @@
+---
+category: "app"
+description: "TAKEOFF includes several helper functions to protect your SaaS content."
+index: 11
+slug: "content-protection"
+title: "Content Protection"
+---
+
+# Content Protection
+
+TAKEOFF includes several helper functions to protect your SaaS content. These functions should be used within **[getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props)**.
+
+## Funtions
+
+- name: `paymentRedirect`
+- description: Protect routes that require a User to be signed in AND require a user to have a Subscription.
+- **tip** Use this function to protect content from non-subscribed Users.
+- **advanced** Feel free to use this function to only allow Users with a certain Subscription tier (based on your pricing model) to access some content!
+
+<br />
+
+- name: `protectRoute`
+- description: Protect routes that require a User to be signed in.
+
+<br />
+
+- name: `publicRedirectIfAuthenticatedRoute`
+- description: Improve User flow by redirecting them to a specified page if they are already logged in.
+- **tip** TAKEOFF uses this on login/signup pages, redirecting logged in Users back to their home page.

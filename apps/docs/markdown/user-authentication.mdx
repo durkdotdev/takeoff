@@ -1,0 +1,23 @@
+---
+category: "app"
+description: "TAKEOFF handles user authentication for you. Out-of-the-box, you can use both email/password credentials and Google OAuth."
+index: 9
+slug: "user-authentication"
+title: "User Authentication"
+---
+
+# User Authentication
+
+TAKEOFF handles user authentication for you. Out-of-the-box, you can use both email/password credentials and Google OAuth.
+
+**Note:** If you get an _Access Denied_ error the first time attempting to sign up with Google's OAuth, go back to the sign up page and try again. This is an active bug; however, after trying again your Google OAuth should work perfectly.
+
+## Adding to Authentication
+
+If you want to add more, you may look at `apps/app/pages/api/[...nextauth]`.
+
+For more information on [NextAuth](https://next-auth.js.org/), read the [NextAuth docs](https://next-auth.js.org/getting-started/example#add-api-route).
+
+## Adding Social Providers
+
+To add more social providers, such as GitHub or Twitter, see [NextAuth Providers](https://next-auth.js.org/providers/).

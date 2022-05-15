@@ -1,0 +1,36 @@
+---
+category: "ui"
+description: "If you selected a CSS Framework, TAKEOFF automatically enables dark mode on your apps."
+index: 14
+slug: "dark-mode"
+title: "Dark Mode"
+---
+
+# Dark Mode
+
+If you selected a CSS Framework, TAKEOFF automatically enables dark mode on your apps.
+
+## Chakra UI
+
+To enable dark mode on [Chakra UI](https://chakra-ui.com/), TAKEOFF creates a [theme config](https://chakra-ui.com/docs/styled-system/features/color-mode#updating-the-theme-config) and adds the [ColorModeScript](https://chakra-ui.com/docs/styled-system/features/color-mode#adding-the-colormodescript).
+
+- `theme.ts` - Chakra UI theme config
+- `_document.tsx` - ColorModeScript usage
+
+For more information, see the [Chakra UI docs](https://chakra-ui.com/docs/styled-system/features/color-mode).
+
+## daisyUI
+
+TAKEOFF uses [next-themes](https://github.com/pacocoursey/next-themes) with [daisyUI](https://daisyui.com/) to manage your app's theme.
+
+- `_app.tsx` - next-themes **ThemeProvider** initlialization
+
+daisyUI has over two dozen themes, for more information, see [the daisyUI docs](https://daisyui.com/docs/themes/).
+
+## Tailwind CSS
+
+TAKEOFF uses [next-themes](https://github.com/pacocoursey/next-themes) and [nightwind](https://github.com/jjranalli/nightwind) to easily configure dark mode with [Tailwind CSS](https://tailwindcss.com/).
+
+- `_app.tsx` - next-themes **ThemeProvider** initlialization configured for **nightwind**
+
+For more on creating dark utility classes with Tailwind CSS, see [the Tailwind CSS docs](https://tailwindcss.com/docs/dark-mode).

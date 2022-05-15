@@ -1,0 +1,15 @@
+#__next {
+  @apply flex;
+}
+
+main {
+  @apply flex-1 flex flex-col min-h-screen max-w-[100vw];
+}
+
+.prose > * {
+  @apply text-black;
+}
+
+.prose > pre > code {
+  @apply p-0 bg-black border-none rounded-none shadow-none;
+}

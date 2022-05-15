@@ -1,0 +1,32 @@
+{
+  "name": "create-takeoff",
+  "description": "Instantly create a SaaS project with user authentication, Stripe payments, and more all from one simple command.",
+  "version": "0.2.0",
+  "bin": {
+    "create-takeoff": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup index.ts --format cjs"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "4.0.0",
+    "execa": "5.0.0",
+    "fs-extra": "^10.0.1",
+    "github-directory-downloader": "^1.3.6",
+    "gradient-string": "^2.0.0",
+    "inquirer": "^8.2.2",
+    "ora": "4.0.4"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/gradient-string": "^1.1.2",
+    "@types/inquirer": "^8.2.1",
+    "tsup": "^5.12.1",
+    "typescript": "^4.5.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "durk.dev"
+}

@@ -1,0 +1,70 @@
+---
+category: "main"
+description: "Before running your app, add your environment variables to configure all TAKEOFF features."
+index: 3
+slug: "environment-variables"
+title: "Environment Variables"
+---
+
+# Environment Variables
+
+Before running your app, add your environment variables to configure all TAKEOFF features. Add these variables to a `.env` file located within `/apps/app`.
+
+Your app's `example.env` file has all the environment variable names TAKEOFF expects.
+
+## Database
+
+- name: `DATABASE_URL`
+- value: Database URL connection string for Prisma
+- learn more: [Prisma docs](https://www.prisma.io/docs/reference/database-reference/connection-urls#env)
+
+## NextAuth
+
+- name: `NEXTAUTH_SECRET`
+- value: A random string used to hash tokens for user authentication
+- tip: Easily generate a random secret using the following command:
+
+```bash
+openssl rand -base64 32
+```
+
+- learn more: [NextAuth docs](https://next-auth.js.org/configuration/options#nextauth_secret)
+
+<br />
+
+- name: `NEXTAUTH_URL`
+- value: The canonical URL of your site. When in development, this is: [http://localhost:3000](http://localhost:3000)
+- learn more: [NextAuth docs](https://next-auth.js.org/configuration/options#nextauth_url)
+
+## Sendinblue
+
+TAKEOFF uses [Sendinblue](https://www.sendinblue.com/) because they have a generous free tier for sending email notifications.
+
+- name: `SEND_IN_BLUE_USER`
+- value: Username for your Sendinblue account
+
+<br />
+
+- name: `SEND_IN_BLUE_PASSWORD`
+- value: API key, get it from [your settings (SMTP & API)](https://account.sendinblue.com/advanced/api)
+- learn more: [Sendinblue docs](https://developers.sendinblue.com/docs/send-a-transactional-email)
+
+## Stripe
+
+[Stripe](https://stripe.com/) handles credit card payments, subscription billing, and tracking your customers.
+
+- name: `STRIPE_SECRET_KEY`
+- value: Stripe secret API key
+- learn more: [Stripe docs](https://stripe.com/docs/keys#obtain-api-keys)
+
+<br />
+
+- name: `STRIPE_SIGNING_SECRET`
+- value: [Stripe Webhook](https://stripe.com/docs/api/webhook_endpoints) signing secret key
+- tip: Easily generate a Stripe Webhook signing secret key with [TAKEOFF's built in command](https://docs.takeoff.com/scripts#stripe-webhooks):
+
+```bash
+yarn stripe-webhooks
+```
+
+- learn more: [Stripe docs](https://stripe.com/docs/api/webhook_endpoints)

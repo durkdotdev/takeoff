@@ -1,0 +1,32 @@
+{
+  "name": "turborepo-basic-shared",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev prisma --scope=docs --scope=web --parallel",
+    "dev-js": "turbo run dev prisma --scope=app-js --scope=marketing-js --parallel",
+    "dev-ts": "turbo run dev prisma --scope=app-ts --scope=marketing-ts --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx}\" && yarn eslint ./ --fix",
+    "templates": "node buildTemplates.ts && yarn format"
+  },
+  "devDependencies": {
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "replace-in-file": "^6.3.2"
+  }
+}

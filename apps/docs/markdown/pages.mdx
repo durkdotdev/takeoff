@@ -1,0 +1,48 @@
+---
+category: "app"
+description: "TAKEOFF projects come with a pre-built few pages to create a SaaS boilerplate and show you how to use the codebase"
+index: 7
+slug: "pages"
+title: "Pages"
+---
+
+# Pages
+
+TAKEOFF projects come with a few pre-built pages within `app/pages` to create a SaaS boilerplate and show you how to use the codebase:
+
+## Login
+
+- `login`
+- description: Login form.
+
+## Logout
+
+- `signup`
+- description: Sign Up form.
+
+## Reset
+
+- `reset/index`
+- description: Forgotten password/password reset form.
+
+<br />
+
+- `reset/[id]`
+- description: Custom link for user to reset their password.
+
+## Index
+
+- `index`
+- description: Dashboard home page.
+
+## Account
+
+- `account`
+- description: Display current User's information and their current Subscription or Trial.
+- page props: current User, current User's Subscription
+
+## Subscriptions
+
+- `subscriptions`
+- description: Showcase all Subscriptions/Products from the Stripe Dashboard. Direct User's to Billing or Customer Portal to purchase or manage their Subscriptions.
+- page props: Subscriptions, current User's Subscription
