@@ -13,46 +13,40 @@ TAKEOFF is a CLI that bootstraps SaaS codebases with a boilerplate powered by a 
 #### create-takeoff
 
 - `packages/create-takeoff`: CLI to create TAKEOFF projects
-- `apps/takeoff-app`: TAKEOFF base app, a [Next.js](https://nextjs.org) app
-- `apps/takeoff-marketing`: TAKEOFF marketing app, a [Next.js](https://nextjs.org) app
+- `apps/app-<js/ts>`: TAKEOFF base app, a [Next.js](https://nextjs.org) app (JavaScript and TypeScript)
+- `apps/marketing-<js/ts>`: TAKEOFF marketing app, a [Next.js](https://nextjs.org) app (JavaScript and TypeScript)
 
-The TAKEOFF base app has multiple iterations of the same base app for each UI choice in the TAKEOFF CLI's `create-takeoff` command:
+TAKEOFF base apps have multiple iterations of the same app for each UI choice in the TAKEOFF CLI's `create-takeoff` command:
 
 - `pages/chakra`: Pages use `chakra`
 - `pages/daisy`: Pages use `daisy`
 - `pages/tailwind`: Pages use `tailwind`
 - `pages/unstyled`: Pages use `unstyled`
 
-The TAKEOFF base app has multiple UI component libraries for each UI choice in the TAKEOFF CLI's `create-takeoff` command:
+TAKEOFF base apps have multiple UI component libraries for each UI choice in the TAKEOFF CLI's `create-takeoff` command:
 
-- `packages/chakra`: React component library styled with [Chakra UI](https://chakra-ui.com/)
-- `packages/daisy`: React component library styled with [Daisy UI]()
-- `packages/tailwind`: React component library unstyled but have [Tailwind CSS]() configured
-- `packages/unstyled`: React component library unstyled serving as a boilerplate UI package
+- `packages/chakra-<js/ts>`: React component library styled with [Chakra UI](https://chakra-ui.com/)
+- `packages/daisy-<js/ts>`: React component library styled with [Daisy UI]()
+- `packages/tailwind-<js/ts>`: React component library unstyled but have [Tailwind CSS]() configured
+- `packages/unstyled-<js/ts>`: React component library unstyled serving as a boilerplate UI package
 
 #### Workspace
 
 - `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json` used throughout the monorepo
+- `tsconfig`: `tsconfig.json` used throughout the monorepo for TypeScript projects
 
 ## Scripts
 
-Run the TAKEOFF `docs` and `web` apps, TAKEOFF PostgreSQL database, and `ui` package:
+Run the TAKEOFF `docs` and `web` apps along with the `ui` package:
 
 ```bash
 yarn dev-main
 ```
 
-Generate a Stripe webhook signing secret for local testing within the TAKEOFF `web` app (add to `.env`):
+Run the TAKEOFF base app and marketing page, example PostgreSQL database, and all UI packages (JavaScript or TypeScript):
 
 ```bash
-yarn stripe-webhooks-main
-```
-
-Run the TAKEOFF base app and marketing page, example PostgreSQL database, and all UI packages:
-
-```bash
-yarn dev-takeoff
+yarn dev-<js/ts>
 ```
 
 Build the TAKEOFF CLI:
