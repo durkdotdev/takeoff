@@ -98,8 +98,8 @@ const main = async () => {
   // fse.copySync(`../../templates/${language}/${template}`, projectDir);
   // Production - clone from GitHub repository
   await download(
-    `https://github.com/durkdotdev/takeoff/tree/main/templates/${language}/${template}`,
-    projectDir,
+    `https://github.com/durkdotdev/takeoff/tree/master/templates/${language}/${template}`,
+    projectDir
   );
 
   process.chdir(projectDir);

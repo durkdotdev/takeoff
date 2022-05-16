@@ -1,3 +1,5 @@
+import * as Chakra from "@chakra-ui/react";
+
 const Input = ({ label, ...rest }) => {
   return (
     <Chakra.FormControl>

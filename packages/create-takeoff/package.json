@@ -1,7 +1,7 @@
 {
   "name": "create-takeoff",
   "description": "Instantly create a SaaS project with user authentication, Stripe payments, and more all from one simple command.",
-  "version": "0.2.0",
+  "version": "0.5.0",
   "bin": {
     "create-takeoff": "dist/index.js"
   },

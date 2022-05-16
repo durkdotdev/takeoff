@@ -2,7 +2,25 @@
 
 TAKEOFF is a CLI that bootstraps SaaS codebases with a boilerplate powered by a high performance TypeScript/JavaScript Turborepo, multiple Next.js apps, a React component library, and Stripe subscription payments.
 
-## Apps and Packages
+#### Features
+
+**Languages**: Choose between TypeScript and JavaScript monorepos.
+
+**CSS Frameworks**: TAKEOFF configures a CSS Framework across your monorepo depending on your selection:
+
+- [Chakra UI](https://chakra-ui.com)
+- [Tailwind CSS](https://tailwindcss.com)
+- Tailwind CSS + [daisy UI](https://daisyui.com)
+
+Alternatively, you may select `unstyled` to use your own framework or regular CSS.
+
+## What's In a TAKEOFF SaaS
+
+- `app`: A SaaS [Next.js](https://nextjs.org) app with a database, Stripe subscriptions, and user authentication enabled
+- `marketing`: A SaaS [Next.js](https://nextjs.org) marketing website
+- `ui`: React component library shared by `app` and `marketing` equipped with the design system chosen during the `npx create-takeoff` command
+
+## Development Apps and Packages
 
 #### TAKEOFF
 
@@ -26,8 +44,8 @@ TAKEOFF base apps have multiple iterations of the same app for each UI choice in
 TAKEOFF base apps have multiple UI component libraries for each UI choice in the TAKEOFF CLI's `create-takeoff` command:
 
 - `packages/chakra-<js/ts>`: React component library styled with [Chakra UI](https://chakra-ui.com/)
-- `packages/daisy-<js/ts>`: React component library styled with [Daisy UI]()
-- `packages/tailwind-<js/ts>`: React component library unstyled but have [Tailwind CSS]() configured
+- `packages/daisy-<js/ts>`: React component library styled with [Daisy UI](https://daisyui.com)
+- `packages/tailwind-<js/ts>`: React component library unstyled but have [Tailwind CSS](https://tailwindcss.com) configured
 - `packages/unstyled-<js/ts>`: React component library unstyled serving as a boilerplate UI package
 
 #### Workspace
