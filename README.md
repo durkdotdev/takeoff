@@ -2,7 +2,7 @@
 
 TAKEOFF is a CLI that bootstraps SaaS codebases with a boilerplate powered by a high performance TypeScript/JavaScript Turborepo, multiple Next.js apps, a React component library, and Stripe subscription payments.
 
-#### Features
+### Features
 
 **Languages**: Choose between TypeScript and JavaScript monorepos.
 
@@ -14,7 +14,7 @@ TAKEOFF is a CLI that bootstraps SaaS codebases with a boilerplate powered by a 
 
 Alternatively, you may select `unstyled` to use your own framework or regular CSS.
 
-## What's In a TAKEOFF SaaS
+## What's Inside a TAKEOFF SaaS
 
 - `app`: A SaaS [Next.js](https://nextjs.org) app with a database, Stripe subscriptions, and user authentication enabled
 - `marketing`: A SaaS [Next.js](https://nextjs.org) marketing website
