@@ -1,7 +1,9 @@
 /packages/chakra-js/Button.js
 /packages/chakra-js/Input.js
+/packages/chakra-js/ThemeButton.js
 
 /templates/_files/apps/pages/js/**/_document.js
 /templates/_files/apps/pages/js/**/_app.js
 /templates/js/chakra/packages/ui/Button.js
 /templates/js/chakra/packages/ui/Input.js
+/templates/js/chakra/packages/ui/ThemeButton.js

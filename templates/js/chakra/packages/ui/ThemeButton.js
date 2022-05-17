@@ -1,3 +1,4 @@
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import * as Chakra from "@chakra-ui/react";
 
 const ThemeButton = () => {

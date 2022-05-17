@@ -2,7 +2,7 @@
 
 This repository was created with [TAKEOFF](https://takeoff.durk.dev.com) and the `npx create-takeoff` command.
 
-## Inside create-takeoff
+## What's Inside
 
 TAKEOFF automatically created the following apps/packages:
 

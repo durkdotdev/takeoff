@@ -99,7 +99,8 @@ const main = async () => {
   // Production - clone from GitHub repository
   await download(
     `https://github.com/durkdotdev/takeoff/tree/master/templates/${language}/${template}`,
-    projectDir
+    projectDir,
+    { muteLog: true }
   );
 
   process.chdir(projectDir);
