@@ -25,8 +25,7 @@
 		"react-icons": "^4.3.1",
 		"simple-ts-utils": "^1.1.0",
 		"stripe": "^8.216.0",
-		"superjson": "^1.8.1",
-		"ui": "*"
+		"superjson": "^1.8.1"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.4",

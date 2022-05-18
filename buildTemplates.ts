@@ -13,9 +13,10 @@ const appsDeleteFiles = [
 const appsSharedFiles = [
   "next.config.js",
   "daisy.config.js",
+  "influx.config.js",
   "tailwind.config.js"
 ];
-const languages = ["ts", "js"];
+const languages = ["js", "ts"];
 const languagesBlacklist = {
   js: {
     devDependencies: [
@@ -38,16 +39,35 @@ const packages = {
   js: ["config"],
   ts: ["config", "tsconfig"]
 };
-const uis = ["chakra", "daisy", "tailwind", "unstyled"];
+const uis = ["chakra", "daisy", "influx", "tailwind", "unstyled"];
 const uisAppsFileBlacklist = {
-  chakra: ["daisy.config.js", "postcss.config.js", "tailwind.config.js"],
-  daisy: ["tailwind.config.js", "theme.js", "theme.ts"],
-  tailwind: ["daisy.config.js", "theme.js", "theme.ts"],
-  unstyled: ["postcss.config.js", "tailwind.config.js", "theme.js", "theme.ts"]
+  chakra: [
+    "daisy.config.js",
+    "influx.config.js",
+    "postcss.config.js",
+    "tailwind.config.js"
+  ],
+  daisy: ["influx.config.js", "tailwind.config.js", "theme.js", "theme.ts"],
+  influx: ["daisy.config.js", "tailwind.config.js", "theme.js", "theme.ts"],
+  tailwind: ["daisy.config.js", "influx.config.js", "theme.js", "theme.ts"],
+  unstyled: [
+    "daisy.config.js",
+    "influx.config.js",
+    "postcss.config.js",
+    "tailwind.config.js",
+    "theme.js",
+    "theme.ts"
+  ]
 };
 const uisPackagesBlacklist = {
   chakra: {
-    dependencies: ["daisyui", "next-themes", "nightwind", "react-icons"],
+    dependencies: [
+      "daisyui",
+      "influx-ui",
+      "next-themes",
+      "nightwind",
+      "react-icons"
+    ],
     devDependencies: ["autoprefixer", "postcss", "tailwindcss"]
   },
   daisy: {
@@ -56,6 +76,18 @@ const uisPackagesBlacklist = {
       "@chakra-ui/react",
       "@emotion/react",
       "@emotion/styled",
+      "framer-motion",
+      "influx-ui",
+      "nightwind"
+    ]
+  },
+  influx: {
+    dependencies: [
+      "@chakra-ui/icons",
+      "@chakra-ui/react",
+      "@emotion/react",
+      "@emotion/styled",
+      "daisyui",
       "framer-motion",
       "nightwind"
     ]
@@ -67,7 +99,8 @@ const uisPackagesBlacklist = {
       "@emotion/react",
       "@emotion/styled",
       "framer-motion",
-      "daisyui"
+      "daisyui",
+      "influx-ui"
     ]
   },
   unstyled: {
@@ -78,6 +111,7 @@ const uisPackagesBlacklist = {
       "@emotion/styled",
       "daisyui",
       "framer-motion",
+      "influx-ui",
       "next-themes",
       "nightwind",
       "react-icons"
@@ -210,7 +244,7 @@ const main = async () => {
         `./packages/${ui}-${language}`,
         `./templates/ui/packages/${ui}`
       );
-      const pckgJSON = require(`./templates/ui/packages/${ui}/package.json`);
+      const pckgJSON = require(`./packages/${ui}-${language}/package.json`);
       pckgJSON.name = "ui";
       fse.writeJsonSync(
         `./templates/ui/packages/${ui}/package.json`,
@@ -247,6 +281,15 @@ const main = async () => {
         if (ui === "daisy") {
           fse.renameSync(
             `./templates/${language}/${ui}/apps/${app}/daisy.config.js`,
+            `./templates/${language}/${ui}/apps/${app}/tailwind.config.js`
+          );
+        }
+
+        // FOR INFLUX ONLY
+        // Rename influx.config.js to tailwind.config.js
+        if (ui === "influx") {
+          fse.renameSync(
+            `./templates/${language}/${ui}/apps/${app}/influx.config.js`,
             `./templates/${language}/${ui}/apps/${app}/tailwind.config.js`
           );
         }

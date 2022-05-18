@@ -1,8 +1,7 @@
 {
   "name": "daisy-js",
   "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
+  "main": "./index.js",
   "license": "MIT",
   "devDependencies": {
     "classnames": "^2.3.1",

@@ -62,8 +62,8 @@ const main = async () => {
         type: "list",
         message: "Which language do you want to use?",
         choices: [
-          { name: "JavaScript", value: "js" },
-          { name: "TypeScript", value: "ts" }
+          { name: "TypeScript (default)", value: "ts" },
+          { name: "JavaScript", value: "js" }
         ]
       }
     ])
@@ -77,6 +77,7 @@ const main = async () => {
         type: "list",
         message: "Which design system do you want to use?",
         choices: [
+          { name: "Influx UI (default)", value: "influx" },
           { name: "Chakra UI", value: "chakra" },
           { name: "Tailwind CSS", value: "tailwind" },
           { name: "TailwindCSS + daisyUI", value: "daisy" },

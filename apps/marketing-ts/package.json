@@ -15,12 +15,12 @@
     "@emotion/styled": "^11",
     "daisyui": "^2.13.6",
     "framer-motion": "^6",
+    "influx-ui": "^1.0.1",
     "next": "12.0.8",
     "nightwind": "^1.1.12",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "simple-ts-utils": "^1.1.0",
-    "ui": "*"
+    "simple-ts-utils": "^1.1.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",

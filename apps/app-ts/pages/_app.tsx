@@ -1,4 +1,6 @@
 import "tailwindcss/tailwind.css";
+// influx development
+import "influx-ui/influx-ui.css";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
@@ -9,7 +11,7 @@ import { useEffect } from "react";
 import { tailwindPreflight } from "../styles/tailwind-preflight";
 import theme from "../theme";
 
-const uiOptions = ["chakra", "daisy", "tailwind", "unstyled"];
+const uiOptions = ["chakra", "daisy", "influx", "tailwind", "unstyled"];
 
 const MyApp = ({
   Component,
@@ -33,6 +35,7 @@ const MyApp = ({
           <Component {...pageProps} />
         </ChakraProvider>
       ) : router.pathname.includes("daisy") ||
+        router.pathname.includes("influx") ||
         router.pathname.includes("tailwind") ? (
         <ThemeProvider
           attribute="class"

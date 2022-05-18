@@ -1,0 +1,27 @@
+{
+  "name": "create-takeoff",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev prisma --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md,mdx}\" && yarn eslint ./ --fix",
+    "stripe-webhooks": "turbo run stripe-webhooks",
+    "takeoff-init": "cd apps/app && npx prisma db push && npx prisma generate"
+  },
+  "devDependencies": {
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  }
+}

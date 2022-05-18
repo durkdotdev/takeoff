@@ -20,6 +20,7 @@
     "bcryptjs": "^2.4.3",
     "daisyui": "^2.13.6",
     "framer-motion": "^6",
+    "influx-ui": "^1.0.1",
     "micro": "^9.3.4",
     "next": "12.0.8",
     "next-auth": "^4.3.1",
@@ -31,8 +32,7 @@
     "react-icons": "^4.3.1",
     "simple-ts-utils": "^1.1.0",
     "stripe": "^8.216.0",
-    "superjson": "^1.8.1",
-    "ui": "*"
+    "superjson": "^1.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.4",
