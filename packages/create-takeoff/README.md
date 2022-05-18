@@ -16,6 +16,7 @@ Then follow the prompts in your terminal.
 
 **CSS Frameworks**: TAKEOFF configures a CSS Framework across your monorepo depending on your selection:
 
+- [Influx UI (Default)](https://influx-ui.durk.dev/)
 - [Chakra UI](https://chakra-ui.com)
 - [Tailwind CSS](https://tailwindcss.com)
 - Tailwind CSS + [daisy UI](https://daisyui.com)

@@ -2,7 +2,7 @@
   "name": "create-takeoff",
   "description": "Instantly create a SaaS project with user authentication, Stripe payments, and more all from one simple command.",
   "homepage": "takeoff.durk.dev",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "bin": {
     "create-takeoff": "dist/index.js"
   },

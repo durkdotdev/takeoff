@@ -1,0 +1,31 @@
+---
+category: "ui"
+description: "If you selected Influx UI, TAKEOFF will automatically configure it."
+index: 17
+slug: "influx-ui"
+title: "Influx UI"
+---
+
+# daisyUI
+
+[Influx UI](https://influx-ui.durk.dev/) is a lightweight, minimal Tailwind CSS component library created by TAKEOFF's founder, [durkdotdev](https://twitter.com/durkdotdev), and is the default CSS framework for TAKEOFF projects.
+
+If you selected Influx UI, TAKEOFF will automatically configure it within `_app.tsx` and `tailwind.config.js`:
+
+```jsx
+// _app.tsx
+
+import "tailwindcss/tailwind.css";
+import "influx-ui/influx-ui.css";
+
+...
+```
+
+```js
+// tailwind.config.js
+
+module.exports = {
+  //...
+  plugins: [require("influx-ui")]
+};
+```

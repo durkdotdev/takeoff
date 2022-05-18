@@ -8,6 +8,7 @@ TAKEOFF is a CLI that bootstraps SaaS codebases with a boilerplate powered by a 
 
 **CSS Frameworks**: TAKEOFF configures a CSS Framework across your monorepo depending on your selection:
 
+- [Influx UI (Default)](https://influx-ui.durk.dev/)
 - [Chakra UI](https://chakra-ui.com)
 - [Tailwind CSS](https://tailwindcss.com)
 - Tailwind CSS + [daisy UI](https://daisyui.com)
@@ -38,6 +39,7 @@ TAKEOFF base apps have multiple iterations of the same app for each UI choice in
 
 - `pages/chakra`: Pages use `chakra`
 - `pages/daisy`: Pages use `daisy`
+- `pages/influx`: Pages use `influx`
 - `pages/tailwind`: Pages use `tailwind`
 - `pages/unstyled`: Pages use `unstyled`
 
@@ -45,6 +47,7 @@ TAKEOFF base apps have multiple UI component libraries for each UI choice in the
 
 - `packages/chakra-<js/ts>`: React component library styled with [Chakra UI](https://chakra-ui.com/)
 - `packages/daisy-<js/ts>`: React component library styled with [Daisy UI](https://daisyui.com)
+- `packages/influx-<js/ts>`: React component library styled with [Influx Ui](https://influx-ui.durk.dev/)
 - `packages/tailwind-<js/ts>`: React component library unstyled but have [Tailwind CSS](https://tailwindcss.com) configured
 - `packages/unstyled-<js/ts>`: React component library unstyled serving as a boilerplate UI package
 
