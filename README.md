@@ -77,6 +77,12 @@ cd packages/create-takeoff
 yarn build
 ```
 
+Build the TAKEOFF CLI Templates:
+
+```bash
+yarn templates
+```
+
 Format all files:
 
 ```bash

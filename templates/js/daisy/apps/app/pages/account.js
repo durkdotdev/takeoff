@@ -3,10 +3,10 @@ import { signOut } from "next-auth/react";
 import { requester } from "simple-ts-utils";
 
 import { MARKETING_URL } from "../lib";
+// import { calculateTrialTimeLeft } from "../lib";
 import { protectRoute } from "../lib/authenticate";
 import { getUser } from "../lib/prisma/models/user";
 import { getCustomerSubscription } from "../lib/stripe";
-// import { calculateTrialTimeLeft } from "../lib/stripe";
 
 export const getServerSideProps = async (context) => {
   // If not signed in, redirect to login

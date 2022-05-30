@@ -4,10 +4,10 @@ import { signOut } from "next-auth/react";
 import { requester } from "simple-ts-utils";
 
 import { MARKETING_URL } from "../lib";
+// import { calculateTrialTimeLeft } from "../lib";
 import { protectRoute } from "../lib/authenticate";
 import { getUser, User } from "../lib/prisma/models/user";
 import { getCustomerSubscription, Subscription } from "../lib/stripe";
-// import { calculateTrialTimeLeft } from "../lib/stripe";
 
 interface AccountPageProps {
   subscription: Subscription;
