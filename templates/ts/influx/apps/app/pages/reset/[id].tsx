@@ -1,9 +1,9 @@
-import { Button, Form, Input } from "daisy-ts";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
 import Router from "next/router";
 import { useState } from "react";
 import { requester } from "simple-ts-utils";
+import { Button, Form, Input } from "ui";
 
 import { publicRedirectIfAuthenticatedRoute } from "../../lib/authenticate";
 import { getReset, Reset } from "../../lib/prisma/models/reset";

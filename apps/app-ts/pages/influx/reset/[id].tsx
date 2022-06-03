@@ -1,4 +1,4 @@
-import { Button, Form, Input } from "daisy-ts";
+import { Button, Form, Input } from "influx-ts";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
 import Router from "next/router";
