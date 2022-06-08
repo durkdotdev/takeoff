@@ -1,12 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Link from "next/link";
 import { NextSeo } from "next-seo";
 import { GrCode } from "react-icons/gr";
 import { IoRocketSharp } from "react-icons/io5";
 import { MdDashboardCustomize } from "react-icons/md";
-import { Callout, Card, HighlightedText, Pole } from "ui";
 
-import { getDocsUrl } from "../lib/helpers";
+import Callout from "../components/Callout";
+import Card from "../components/Card";
+import LandingFooter from "../components/footers/LandingFooter";
+import HighlightedText from "../components/HighlightedText";
+import LandingNavigation from "../components/navs/LandingNavigation";
+import Pole from "../components/Pole";
 
 const featuresMain = [
   {
@@ -32,6 +37,7 @@ const languageImages = [
 ];
 
 const uiImages = [
+  { alt: "Influx UI", src: "/images/logos/influxui.png" },
   { alt: "Chakra UI", src: "/images/logos/chakraui.png" },
   { alt: "daisyUI", src: "/images/logos/daisy.svg" },
   { alt: "Tailwind CSS", src: "/images/logos/tailwind.svg" }
@@ -54,6 +60,11 @@ const appsPackagesInfo = [
 const HomePage = () => {
   return (
     <>
+      <style>{`
+        #__next {
+          flex-direction: column !important;
+        }
+      `}</style>
       <NextSeo
         description="TAKEOFF launches SaaS projects instantly instead of wasting months of your development time. Never worry about authentication, payment flows, or project setup again."
         canonical="https://takeoff.durk.dev"
@@ -70,6 +81,9 @@ const HomePage = () => {
           cardType: "summary_large_image"
         }}
       />
+
+      <LandingNavigation />
+
       <main>
         <div className="flex flex-col w-full mx-auto">
           <div className="flex flex-col items-center justify-center px-6 my-16">
@@ -95,14 +109,11 @@ const HomePage = () => {
                 npx create-takeoff
               </pre>
 
-              <a
-                className="px-4 py-3 text-sm font-bold text-indigo-300 uppercase border border-black rounded-lg shadow-lg hover:bg-neutral-100 shadow-fuchsia-400/40"
-                href={getDocsUrl()}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Documentation
-              </a>
+              <Link href="/docs">
+                <a className="px-4 py-3 text-sm font-bold text-indigo-300 uppercase border border-black rounded-lg shadow-lg hover:bg-neutral-100 shadow-fuchsia-400/40">
+                  Documentation
+                </a>
+              </Link>
             </div>
           </div>
 
@@ -178,7 +189,7 @@ const HomePage = () => {
             </div>
 
             <div className="relative flex justify-center h-full md:py-16 md:justify-start md:w-1/2">
-              <div className="flex flex-wrap items-center space-x-4 space-y-4 md:space-x-8 md:space-y-8">
+              <div className="flex flex-wrap items-center justify-center space-x-4 md:justify-start md:space-x-8">
                 {uiImages.map((image) => (
                   <img
                     alt={image.alt}
@@ -261,14 +272,11 @@ const HomePage = () => {
                 ))}
               </div>
 
-              <a
-                className="text-sm font-bold uppercase hover:underline"
-                href={`${getDocsUrl()}/features`}
-                rel="noreferrer"
-                target="_blank"
-              >
-                View All Features
-              </a>
+              <Link href="/docs/features">
+                <a className="text-sm font-bold uppercase hover:underline">
+                  View All Features
+                </a>
+              </Link>
             </div>
           </section>
 
@@ -290,18 +298,17 @@ const HomePage = () => {
                 npx create-takeoff
               </pre>
 
-              <a
-                className="px-4 py-3 text-sm font-bold text-indigo-300 uppercase border border-black rounded-lg shadow-lg hover:bg-neutral-100 shadow-fuchsia-400/40"
-                href={getDocsUrl()}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Documentation
-              </a>
+              <Link href="/docs">
+                <a className="px-4 py-3 text-sm font-bold text-indigo-300 uppercase border border-black rounded-lg shadow-lg hover:bg-neutral-100 shadow-fuchsia-400/40">
+                  Documentation
+                </a>
+              </Link>
             </div>
           </div>
         </div>
       </main>
+
+      <LandingFooter />
     </>
   );
 };

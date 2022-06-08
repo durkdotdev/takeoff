@@ -1,22 +1,12 @@
 import Link from "next/link";
-import { getEnvironmentURL } from "simple-ts-utils";
-import { HighlightedText, LayoutLink } from "ui";
+
+import HighlightedText from "../HighlightedText";
+import LayoutLink from "../LayoutLink";
 
 const footerLinksLeft = [
   {
-    external: true,
-    href: getEnvironmentURL(
-      "http://localhost:3002",
-      "https://takeoff-demo.durk.dev"
-    ),
-    title: "Demo"
-  },
-  {
-    external: true,
-    href: getEnvironmentURL(
-      "http://localhost:3001",
-      "https://takeoff-docs.durk.dev"
-    ),
+    external: false,
+    href: "/docs",
     title: "Docs"
   }
 ];
@@ -30,7 +20,7 @@ const footerLinksRight = [
   { external: true, href: "https://twitter.com/durkdotdev", title: "Twitter" }
 ];
 
-const Footer = () => {
+const LandingFooter = () => {
   return (
     <footer className="flex justify-center py-8 border-t border-black bg-neutral-100">
       <div className="flex flex-col w-full max-w-6xl px-6 space-y-4">
@@ -67,4 +57,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default LandingFooter;

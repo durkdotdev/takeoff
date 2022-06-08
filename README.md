@@ -26,8 +26,6 @@ Alternatively, you may select `unstyled` to use your own framework or regular CS
 #### TAKEOFF
 
 - `apps/docs`: TAKEOFF docs, a [Next.js](https://nextjs.org) app
-- `apps/web`: TAKEOFF website, a [Next.js](https://nextjs.org) app
-- `packages/ui`: React component library shared by both `web` and `docs`
 
 #### create-takeoff
 
@@ -58,10 +56,10 @@ TAKEOFF base apps have multiple UI component libraries for each UI choice in the
 
 ## Scripts
 
-Run the TAKEOFF `docs` and `web` apps along with the `ui` package:
+Run the TAKEOFF `docs` app:
 
 ```bash
-yarn dev-main
+yarn dev
 ```
 
 Run the TAKEOFF base app and marketing page, example PostgreSQL database, and all UI packages (JavaScript or TypeScript):

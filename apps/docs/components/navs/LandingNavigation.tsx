@@ -1,28 +1,20 @@
 import Link from "next/link";
 import { AiFillGithub } from "react-icons/ai";
-import { getEnvironmentURL } from "simple-ts-utils";
-import { LayoutLink, Logo, Menu, MenuLink } from "ui";
+
+import LayoutLink from "../LayoutLink";
+import Logo from "../Logo";
+import Menu from "../Menu";
+import MenuLink from "../MenuLink";
 
 const navigationLinks = [
   {
-    external: true,
-    href: getEnvironmentURL(
-      "http://localhost:3002",
-      "https://takeoff-demo.durk.dev"
-    ),
-    title: "Demo"
-  },
-  {
-    external: true,
-    href: getEnvironmentURL(
-      "http://localhost:3001",
-      "https://takeoff-docs.durk.dev"
-    ),
+    external: false,
+    href: "/docs",
     title: "Docs"
   }
 ];
 
-const Navigation = () => {
+const LandingNavigation = () => {
   return (
     <nav className="sticky top-0 z-50 flex justify-center bg-white border-b border-black bg-opacity-90 backdrop-filter backdrop-blur-xl">
       <div className="flex items-center justify-between w-full max-w-6xl px-6">
@@ -83,4 +75,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default LandingNavigation;

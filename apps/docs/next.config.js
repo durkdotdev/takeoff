@@ -1,14 +1,12 @@
-const withTM = require("next-transpile-modules")(["ui"]);
-
-module.exports = withTM({
+module.exports = {
   async redirects() {
     return [
       {
-        source: "/",
-        destination: "/getting-started",
+        source: "/docs",
+        destination: "/docs/getting-started",
         permanent: true
       }
     ];
   },
   reactStrictMode: true
-});
+};

@@ -16,7 +16,7 @@ const appsSharedFiles = [
   "influx.config.js",
   "tailwind.config.js"
 ];
-const languages = ["js", "ts"];
+const languages = ["ts", "js"];
 const languagesBlacklist = {
   js: {
     devDependencies: [

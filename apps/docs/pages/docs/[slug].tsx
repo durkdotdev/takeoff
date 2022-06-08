@@ -2,14 +2,14 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { NextSeo } from "next-seo";
 
-import DocsNextPreviousLink from "../components/DocsNextPreviousLink";
-import DocsSidebar from "../components/DocsSidebar";
-import Navigation from "../components/Navigation";
+import DocsNextPreviousLink from "../../components/DocsNextPreviousLink";
+import DocsSidebar from "../../components/DocsSidebar";
+import DocsNavigation from "../../components/navs/DocsNavigation";
 import {
   getAllDocumentationPages,
   getDocumentationPage
-} from "../lib/markdown";
-import { DocumentationPage, DocumentationPageMetadata } from "../types";
+} from "../../lib/markdown";
+import { DocumentationPage, DocumentationPageMetadata } from "../../types";
 
 interface DocsPageProps {
   documentationPages: DocumentationPageMetadata[];
@@ -55,7 +55,7 @@ const DocsPage = ({ documentationPages, page }: DocsPageProps) => {
       />
       <DocsSidebar documentationPages={documentationPages} />
       <main>
-        <Navigation documentationPages={documentationPages} />
+        <DocsNavigation documentationPages={documentationPages} />
         <section className="flex justify-center w-full">
           <article className="w-full max-w-[52rem] px-6 py-12 prose prose-a:transition-all prose-a:ease-in prose-a:decoration-fuchsia-400 prose-a:decoration-2 hover:prose-a:text-fuchsia-400 prose-code:px-4 prose-code:py-1 prose-code:bg-indigo-200 prose-code:border prose-code:border-black prose-code:rounded-lg prose-code:shadow-lg prose-code:shadow-fuchsia-400/60 prose-pre:rounded-lg prose-pre:bg-black prose-pre:!text-white prose-pre:shadow-lg prose-pre:shadow-fuchsia-400/60 !text-black break-words">
             <MDXRemote {...page.content} />

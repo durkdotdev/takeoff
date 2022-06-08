@@ -2,16 +2,17 @@ import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import React from "react";
 import { AiFillGithub } from "react-icons/ai";
-import { getEnvironmentURL } from "simple-ts-utils";
-import { Logo, Menu, Select } from "ui";
 
-import { DocumentationPageMetadata } from "../types";
+import { DocumentationPageMetadata } from "../../types";
+import Logo from "../Logo";
+import Menu from "../Menu";
+import Select from "../Select";
 
-interface NavigationProps {
+interface DocsNavigationProps {
   documentationPages: DocumentationPageMetadata[];
 }
 
-const Navigation = ({ documentationPages }: NavigationProps) => {
+const DocsNavigation = ({ documentationPages }: DocsNavigationProps) => {
   const router = useRouter();
 
   const handleMenuPageChange = (
@@ -24,12 +25,7 @@ const Navigation = ({ documentationPages }: NavigationProps) => {
     <nav className="sticky top-0 z-50 flex justify-center py-4 bg-white border-b border-black bg-opacity-90 backdrop-filter backdrop-blur-xl">
       <div className="flex items-center w-full max-w-[52rem] px-6">
         <div className="max-w-xs md:w-full">
-          <Link
-            href={getEnvironmentURL(
-              "http://localhost:3000",
-              "https://takeoff.durk.dev"
-            )}
-          >
+          <Link href="/">
             <a>
               <Logo />
             </a>
@@ -88,4 +84,4 @@ const Navigation = ({ documentationPages }: NavigationProps) => {
   );
 };
 
-export default Navigation;
+export default DocsNavigation;

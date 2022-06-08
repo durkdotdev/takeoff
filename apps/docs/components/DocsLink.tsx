@@ -11,8 +11,8 @@ const DocsLink = ({ documentationPage }: DocsLinkProps) => {
   const router = useRouter();
 
   const active =
-    router.asPath === `/${documentationPage.slug}` ||
-    (router.asPath === "/" &&
+    router.asPath === `/docs/${documentationPage.slug}` ||
+    (router.asPath === "/docs" &&
       documentationPage.index === 0 &&
       documentationPage.slug === "authentication");
   const className = [
@@ -23,7 +23,7 @@ const DocsLink = ({ documentationPage }: DocsLinkProps) => {
     documentationPage.slug = "";
 
   return (
-    <Link href={`/${documentationPage.slug}`} key={documentationPage.slug}>
+    <Link href={`/docs/${documentationPage.slug}`} key={documentationPage.slug}>
       <a className={className.join(" ")}>
         <span>{documentationPage.title}</span>
         {active && (

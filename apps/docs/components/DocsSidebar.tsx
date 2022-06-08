@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Sidebar } from "ui";
 
 import { DocumentationPageMetadata } from "../types";
 import DocsLink from "./DocsLink";
+import Sidebar from "./Sidebar";
 
 const orderedCategories = ["app", "marketing", "ui", "deployment"];
 

@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev prisma --scope=docs --scope=web --parallel",
+    "dev": "turbo run dev prisma --scope=docs --parallel",
     "dev-js": "turbo run dev prisma --scope=app-js --scope=marketing-js --parallel",
     "dev-ts": "turbo run dev prisma --scope=app-ts --scope=marketing-ts --parallel",
     "lint": "turbo run lint",

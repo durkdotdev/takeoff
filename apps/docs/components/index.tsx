@@ -1,5 +1,3 @@
-import * as React from "react";
-
 export { default as Alert } from "./Alert";
 export { default as AnchorHeading } from "./AnchorHeading";
 export { default as Button } from "./Button";

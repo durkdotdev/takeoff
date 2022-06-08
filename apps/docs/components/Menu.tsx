@@ -1,8 +1,8 @@
 import disableScroll from "disable-scroll";
-import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
-import { RiCloseFill, RiMenuFill } from "react-icons/ri";
+import { useRouter } from "next/router";
 import * as React from "react";
+import { RiCloseFill, RiMenuFill } from "react-icons/ri";
 
 interface MenuProps {
   children: React.ReactNode;
