@@ -122,10 +122,10 @@ const HomePage = () => {
             <IoRocketSharp className="w-4 h-4" />
           </Pole>
 
-          <div className="my-16 mx-auto h-[338px] w-[600px]">
+          <div className="flex justify-center mx-6 my-16">
             <Image
               alt="Terminal Recording"
-              className="rounded-lg shadow-lg shadow-fuchsia-400/60"
+              className="min-h-[338px] min-w-[600px] rounded-lg shadow-lg shadow-fuchsia-400/60"
               height={338}
               src="/images/takeoff_terminal.gif"
               width={600}
