@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 import { GrCode } from "react-icons/gr";
@@ -120,6 +121,16 @@ const HomePage = () => {
           <Pole className="mx-auto">
             <IoRocketSharp className="w-4 h-4" />
           </Pole>
+
+          <div className="my-16 mx-auto h-[338px] w-[600px]">
+            <Image
+              alt="Terminal Recording"
+              className="rounded-lg shadow-lg shadow-fuchsia-400/60"
+              height={338}
+              src="/images/takeoff_terminal.gif"
+              width={600}
+            />
+          </div>
 
           <Callout>
             <div className="w-full p-16 border-black md:w-1/2 bg-neutral-100 md:border-r border-y md:rounded-r-lg">

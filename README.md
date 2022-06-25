@@ -2,6 +2,8 @@
 
 TAKEOFF is a CLI that bootstraps SaaS codebases with a boilerplate powered by a high performance TypeScript/JavaScript Turborepo, multiple Next.js apps, a React component library, and Stripe subscription payments.
 
+![](./apps/docs/public/images//takeoff_terminal.gif)
+
 ### Features
 
 **Languages**: Choose between TypeScript and JavaScript monorepos.

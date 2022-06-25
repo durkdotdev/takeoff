@@ -15,7 +15,7 @@ const DocsNextPreviousLink = ({
   const className = ["group flex flex-col space-y-1 text-center"];
   className.push(direction === "next" ? "sm:text-right" : "sm:text-left");
   return (
-    <Link href={`/${page.slug}`}>
+    <Link href={`/docs/${page.slug}`}>
       <a className={className.join(" ")}>
         <span className="text-sm uppercase font-extralight">{direction}</span>
         <span className="font-bold underline transition-all ease-in decoration-fuchsia-400 decoration-2 group-hover:text-fuchsia-400">
