@@ -2,6 +2,12 @@
 
 TAKEOFF is a CLI that bootstraps SaaS codebases with a boilerplate powered by a high performance TypeScript/JavaScript Turborepo, multiple Next.js apps, a React component library, and Stripe subscription payments.
 
+To create a TAKEOFF project run the following:
+
+```bash
+npx create-takeoff
+```
+
 ![](./apps/docs/public/images//takeoff_terminal.gif)
 
 ### Features
